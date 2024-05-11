@@ -1,0 +1,21 @@
+<html>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <body>
+    <p id="test_line">test</p>
+    <script type="text/javascript">
+      var elm = document.getElementById("test_line");
+      var i = 0
+      function getReposSuccess(response) {
+        elm.textContent = response.data.val
+      }
+      function func1() {
+        axios
+        .get('smellpi:5053/sensor')
+        .then(getReposSuccess)
+        // elm.textContent = i
+        // i = i + 1
+      }
+      setInterval(func1,1000);
+    </script>
+  </body>
+</html>

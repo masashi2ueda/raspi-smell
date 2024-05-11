@@ -41,10 +41,6 @@
 1. nohup python app.py
 1. スマホでbedpi:5053にアクセス
 
-
-    
-
-
 ## 参考
 - [ADRSZOD-臭気センサ拡張基板](https://github.com/bit-trade-one/RasPi-Zero-One-Series/tree/master/5th/ADRSZOD_Odd_Sensor)
 - [Raspberry Pi 4BでI2C、SPIを使用する際の覚書](https://qiita.com/airpocket/items/c0bb5bfdcc5a2c4ec19b)

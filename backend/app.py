@@ -2,17 +2,18 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import time
 
-import sensor
+# import sensor
 
 
-app = Flask(__name__,template_folder='../frontend/dist')
+# app = Flask(__name__,template_folder='../frontend/dist')
+app = Flask(__name__)
 CORS(app,supports_credentials=True)
 
 @app.route('/sensor')
 def hello():
     # name = "Hello World"
-    val = sensor.get_val()
-    # val = 1
+    # val = sensor.get_val()
+    val = 1
     return {'val': val}
 
 @app.route('/', defaults={'path': ''})

@@ -33,6 +33,14 @@
 1. sudo npm cache clean
 1. sudo npm install npm n -g
 1. sudo n stable
+1. git clone https://github.com/masashi2ueda/raspi-smell.git
+1. cd frontend
+1. npm install
+1. npm run build
+1. cd ../backend
+1. nohup python app.py
+1. スマホでbedpi:5053にアクセス
+
 
     
 

@@ -3,17 +3,18 @@
   <body>
     <p id="test_line">test</p>
     <script type="text/javascript">
+      console.log(location.href)
       var elm = document.getElementById("test_line");
       var i = 0
       function getReposSuccess(response) {
         elm.textContent = response.data.val
       }
+      var api_url = location.href + '/sensor'
+      console.log(api_url)
       function func1() {
         axios
-        .get('smellpi:5053/sensor')
+        .get(api_url)
         .then(getReposSuccess)
-        // elm.textContent = i
-        // i = i + 1
       }
       setInterval(func1,1000);
     </script>

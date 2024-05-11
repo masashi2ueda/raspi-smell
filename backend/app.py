@@ -6,7 +6,7 @@ import time
 
 
 # app = Flask(__name__,template_folder='../frontend/dist')
-app = Flask(__name__)
+app = Flask(__name__, template_folder="./")
 CORS(app,supports_credentials=True)
 
 @app.route('/sensor')
@@ -16,9 +16,11 @@ def hello():
     val = 1
     return {'val': val}
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def index(path):
+# @app.route('/', defaults={'path': ''})
+# @app.route('/<path:path>')
+@app.route('/')
+def index():
+    # /Users/uedamasashi/Documents/devs/raspi-smell/backend/
     return render_template('index.html')
 
 ## おまじない
